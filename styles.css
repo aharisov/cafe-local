@@ -1,0 +1,25 @@
+/* header */
+header {
+    background-color: #8D6339;
+}
+
+.navbar .nav-link {
+    position: relative;
+    color: #fff;
+    font-size: 1.2em;
+}
+.navbar .nav-link::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    content: '';
+    transition: 0.2s all;
+}
+.navbar .nav-link:hover::before {
+    transform: scaleX(1);
+}
