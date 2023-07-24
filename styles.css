@@ -71,3 +71,36 @@ header {
     height: 100%;
     object-fit: cover;
 }
+
+/* about section */
+#about figure {
+    width: 50%;
+    margin-right: 3em;
+    margin-bottom: 0;
+    height: 30em;
+}
+#about figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-block .about-right {
+    width: 50%;
+}
+
+/* mobile styles */
+@media (max-width: 639px) {
+    /* about section */
+    .about-block {
+        flex-direction: column;
+    }
+    .about-block figure {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+    .about-block .about-right {
+        width: 100%;
+        text-align: center;
+    }
+}
