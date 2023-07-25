@@ -124,6 +124,36 @@
                 </figure>
             </div>
         </section>
+
+        <!-- form section -->
+        <section id="contacts" class="container mb-5">
+            <!-- form title -->
+            <h2 class="text-center mb-3">Contactez nous</h2>
+
+            <form action="test.php" method="post">
+                <!-- form inputs name and phone -->
+                <div class="row mb-3">
+                    <div class="col">
+                      <input type="text" name="name" class="form-control" placeholder="Votre nom*" required>
+                    </div>
+                    <div class="col">
+                      <input type="text" name="phone" class="form-control" placeholder="Votre phone*" required>
+                    </div>
+                </div>
+
+                <!-- textarea -->
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <textarea name="message" class="form-control" placeholder="Votre message*" required></textarea>
+                    </div>
+                </div>   
+
+                <!-- form submit btn -->
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-secondary btn-lg">Envoyer</button>
+                </div>
+            </form>
+        </section>
     </main>
 
     <!-- footer start -->

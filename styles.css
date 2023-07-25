@@ -95,6 +95,24 @@ header {
     margin-right: 0;
 }
 
+/* contacts section */
+#contacts input {
+    height: 4em;
+    border-color: #8D6339;
+}
+#contacts textarea {
+    height: 10em;
+    border-color: #8D6339;
+    resize: none;
+}
+#contacts button {
+    background-color: #8D6339;
+    border-color: #402913;
+}
+#contacts button:hover {
+    background-color: #402913;
+}
+
 /* mobile styles */
 @media (max-width: 639px) {
     /* about section */
@@ -119,6 +137,18 @@ header {
 
     /* carousel */
     #photos .carousel-inner {
+        width: 100%;
+    }
+
+    /* contacts section */
+    #contacts .col {
+        flex: auto;
+        margin-bottom: 1rem;
+    }
+    #contacts .col:last-child {
+        margin-bottom: 0;
+    }
+    #contacts button {
         width: 100%;
     }
 }
