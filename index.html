@@ -10,9 +10,10 @@
 
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="overflow-x-hidden">
     <!-- header start -->
-    <header class="position-fixed w-100 pt-2 pb-2">
+    <!-- header appears from top to bottom -->
+    <header class="position-fixed w-100 pt-2 pb-2 animate__animated animate__bounceInDown">
         <nav class="navbar navbar-expand-lg">
             <!-- responsive container -->
             <div class="container-fluid">
@@ -51,19 +52,22 @@
     <!-- main page content start -->
     <main>
         <!-- video section start -->
-        <section id="video-block" class="container-fluid position-relative">
+        <!-- section appears from left to right because of the class animate__fadeInLeft -->
+        <section id="video-block" class="container-fluid position-relative animate__animated animate__fadeInLeft">
             <!-- backround video -->
             <video src="https://media.istockphoto.com/id/1269721081/fr/vid%C3%A9o/fermez-vous-vers-le-haut-des-graines-de-caf%C3%A9-les-grains-de-caf%C3%A9-parfum%C3%A9s-sont-de-la-fum%C3%A9e.mp4?s=mp4-640x640-is&k=20&c=7xISKR5TBX7sCnXPkY4xACXKUZ0NNMFKoXCS_KqNCnM=" class="position-absolute" muted loop autoplay></video>
 
             <!-- centered title -->
-            <h2 class="position-relative text-center text-uppercase">notre café est le meilleur</h2>
+            <h2 class="position-relative text-center text-uppercase animate__animated animate__bounceInDown">notre café est le meilleur</h2>
 
             <!-- centered text -->
             <p class="position-relative text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, enim quia eaque nesciunt error temporibus culpa et blanditiis impedit non nobis omnis ipsum, officiis cupiditate repellendus vitae. Ab, explicabo maiores?</p>
         </section>
 
         <!-- carousel block start -->
-        <div id="photos" class="carousel slide mt-5 mb-5">
+        <!-- section appears from left to right because of the class animate__fadeInLeft -->
+        <!-- there is a delay in 2s for appearing -->
+        <div id="photos" class="carousel slide mt-5 mb-5 animate__animated animate__fadeInLeft animate__delay-2s">
             <!-- photos start -->
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -99,12 +103,14 @@
             <!-- 1st block -->
             <div class="about-block d-flex justify-content-between align-items-center">
                 <!-- picture -->
-                <figure>
+                <!-- picture appears with fadIn effect 3s after page loading -->
+                <figure class="animate__animated animate__fadeIn animate__delay-3s">
                     <img src="https://lauvergnenvrac.fr/wp-content/uploads/2020/11/cafe-en-grain-hondura-bio-et-e-quitable-1620x1080-1.jpg" alt="L'image pour l'histoire de café">
                 </figure>
 
                 <!-- title and text -->
-                <div class="about-right">
+                <!-- block appears with from right to left 3s after page loading -->
+                <div class="about-right animate__animated animate__bounceInRight animate__delay-3s">
                     <h2>À propos de nous</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed natus reprehenderit, dolorum eum iure. Dolores accusantium harum et dolorem odit sapiente eveniet temporibus repudiandae nisi sequi, atque deserunt amet?</p>
                 </div>
@@ -113,13 +119,15 @@
             <!-- 2nd block -->
             <div class="about-block d-flex justify-content-between align-items-center">
                 <!-- title and text -->
-                <div class="about-right">
+                <!-- block appears with from left to right 4s after page loading -->
+                <div class="about-right animate__animated animate__bounceInLeft animate__delay-4s">
                     <h2>Nos desserts</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed natus reprehenderit, dolorum eum iure. Dolores accusantium harum et dolorem odit sapiente eveniet temporibus repudiandae nisi sequi, atque deserunt amet?</p>
                 </div>
 
                 <!-- picture -->
-                <figure>
+                <!-- picture appears with fadIn effect 4s after page loading -->
+                <figure class="animate__animated animate__fadeIn animate__delay-4s">
                     <img src="https://cdn.wallpapersafari.com/69/13/quZGNM.jpg" alt="Nos desserts">
                 </figure>
             </div>
@@ -128,11 +136,14 @@
         <!-- price section -->
         <section id="price-block" class="container">
             <!-- section title -->
-            <h2 class="mb-3 text-center">Notre menu</h2>
+            <!-- title appears from top to down because of the class animate__bounceInDown -->
+            <!-- there is a delay in 3s for appearing -->
+            <h2 class="mb-3 text-center animate__animated animate__bounceInDown animate__delay-3s">Notre menu</h2>
 
             <div class="price-list">
                 <!-- 1st category row -->
-                <div class="price-cat d-flex row">
+                <!-- row appears with from bottom to top with 3s delay -->
+                <div class="price-cat d-flex row  animate__animated animate__fadeInUp animate__delay-3s">
                     <div class="price-cat-left">
                         <!-- category picture -->
                         <figure>
@@ -168,7 +179,8 @@
                 </div>
 
                 <!-- 2nd category row -->
-                <div class="price-cat d-flex row">
+                <!-- row appears with from bottom to top with 4s delay -->
+                <div class="price-cat d-flex row animate__animated animate__fadeInUp animate__delay-4s">
                     <div class="price-cat-left">
                         <!-- category picture -->
                         <figure>
@@ -204,7 +216,8 @@
                 </div>
 
                 <!-- 3rd category row -->
-                <div class="price-cat d-flex row align-items-end">
+                <!-- row appears with from bottom to top with 5s delay -->
+                <div class="price-cat d-flex row animate__animated animate__fadeInUp animate__delay-5s">
                     <div class="price-cat-left">
                         <!-- category picture -->
                         <figure>
@@ -242,9 +255,13 @@
         </section>
 
         <!-- form section -->
-        <section id="contacts" class="container mb-5">
+        <!-- section appears from left to right because of the class animate__fadeInLeft -->
+        <!-- there is a delay in 5s for appearing -->
+        <section id="contacts" class="container mb-5 animate__animated animate__fadeInLeft animate__delay-5s">
             <!-- form title -->
-            <h2 class="text-center mb-3">Contactez nous</h2>
+            <!-- title appears from top to down because of the class animate__bounceInDown -->
+            <!-- there is a delay in 5s for appearing -->
+            <h2 class="text-center mb-3 animate__animated animate__bounceInDown animate__delay-5s">Contactez nous</h2>
 
             <form action="test.php" method="post">
                 <!-- form inputs name and phone -->
@@ -273,7 +290,8 @@
     </main>
 
     <!-- footer start -->
-    <footer>
+    <!-- footer appears from bottom to top with 5s delay -->
+    <footer class="animate__animated animate__bounceInUp animate__delay-5s">
         <!-- responsive container-->
         <div class="container-fluid d-flex justify-content-between">
 
