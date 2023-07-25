@@ -18,7 +18,7 @@
             <!-- responsive container -->
             <div class="container-fluid">
                 <!-- logo -->
-                <a href="/" class="navbar-brand"><img src="https://www.freepnglogos.com/uploads/coffee-logo-png/hot-coffee-logos-28.png" alt="Café local logo" height="50"></a>
+                <a href="index.html" class="navbar-brand"><img src="https://www.freepnglogos.com/uploads/coffee-logo-png/hot-coffee-logos-28.png" alt="Café local logo" height="50"></a>
                 
                 <!-- burger for meenu opening in mobile version -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@
             <video src="https://media.istockphoto.com/id/1269721081/fr/vid%C3%A9o/fermez-vous-vers-le-haut-des-graines-de-caf%C3%A9-les-grains-de-caf%C3%A9-parfum%C3%A9s-sont-de-la-fum%C3%A9e.mp4?s=mp4-640x640-is&k=20&c=7xISKR5TBX7sCnXPkY4xACXKUZ0NNMFKoXCS_KqNCnM=" class="position-absolute" muted loop autoplay></video>
 
             <!-- centered title -->
-            <h2 class="position-relative text-center text-uppercase animate__animated animate__bounceInDown">notre café est le meilleur</h2>
+            <h1 class="position-relative text-center text-uppercase animate__animated animate__bounceInDown">notre café est le meilleur</h1>
 
             <!-- centered text -->
             <p class="position-relative text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, enim quia eaque nesciunt error temporibus culpa et blanditiis impedit non nobis omnis ipsum, officiis cupiditate repellendus vitae. Ab, explicabo maiores?</p>
@@ -153,7 +153,7 @@
 
                     <div class="price-cat-right">
                         <!-- category title -->
-                        <h4>Nos boissons</h4>
+                        <h3>Nos boissons</h3>
 
                         <!-- category products -->
                         <div class="products">
@@ -190,7 +190,7 @@
 
                     <div class="price-cat-right">
                         <!-- category title -->
-                        <h4>Viennoiserie incroyable</h4>
+                        <h3>Viennoiserie incroyable</h3>
 
                         <!-- category products -->
                         <div class="products">
@@ -227,7 +227,7 @@
 
                     <div class="price-cat-right">
                         <!-- category title -->
-                        <h4>Nos desserts</h4>
+                        <h3>Nos desserts</h3>
 
                         <!-- category products -->
                         <div class="products">
@@ -267,17 +267,20 @@
                 <!-- form inputs name and phone -->
                 <div class="row mb-3">
                     <div class="col">
-                      <input type="text" name="name" class="form-control" placeholder="Votre nom*" required>
+                        <label for="name">Nom <span><sup>*</sup></span></label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Votre nom*" required>
                     </div>
                     <div class="col">
-                      <input type="text" name="phone" class="form-control" placeholder="Votre phone*" required>
+                        <label for="phone">Phone <span><sup>*</sup></span></label>
+                      <input type="text" name="phone" id="phone" class="form-control" placeholder="Votre phone*" required>
                     </div>
                 </div>
 
                 <!-- textarea -->
                 <div class="row mb-3">
                     <div class="col-12">
-                        <textarea name="message" class="form-control" placeholder="Votre message*" required></textarea>
+                        <label for="message">Message <span><sup>*</sup></span></label>
+                        <textarea name="message" id="message" class="form-control" placeholder="Votre message*" required></textarea>
                     </div>
                 </div>   
 
@@ -294,6 +297,16 @@
     <footer class="animate__animated animate__bounceInUp animate__delay-5s">
         <!-- responsive container-->
         <div class="container-fluid d-flex justify-content-between">
+            <!-- validation logo -->
+            <div class="valid-block">
+                <p>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img style="border:0;width:88px;height:31px"
+                            src="http://jigsaw.w3.org/css-validator/images/vcss"
+                            alt="Valid CSS!" />
+                    </a>
+                </p>
+            </div>
 
             <!-- social icons block -->
             <div class="social-icons">

@@ -1,9 +1,10 @@
 /* common */
 main {
     padding-top: 92px;
+    overflow-x: hidden;
 }
 
-h2 {
+h1, h2 {
     font-size: 3em;
 }
 /* header */
@@ -45,7 +46,7 @@ header {
     object-fit: cover;
     opacity: 0.5;
 }
-#video-block h2,
+#video-block h1,
 #video-block p {
     color: #402913;
 }
@@ -112,6 +113,12 @@ header {
 #contacts button:hover {
     background-color: #402913;
 }
+#contacts label {
+    color: #402913;
+}
+#contacts label span {
+    color: darkred;
+}
 
 /* price section */
 .price-cat {
@@ -142,7 +149,7 @@ header {
 .price-cat:last-child .price-cat-right {
     border: none;
 }
-.price-cat-right h4 {
+.price-cat-right h3 {
     margin-bottom: 1em;
     padding-bottom: 0.2em;
     border-bottom: 2px solid #8D6339;
@@ -195,6 +202,9 @@ footer {
     position: relative;
     top: -2px;
 }
+footer p {
+    margin-bottom: 0;
+}
 
 /* mobile styles */
 @media (max-width: 1199px) {
@@ -233,6 +243,10 @@ footer {
 }
 
 @media (max-width: 639px) {
+    h2 {
+        font-size: 2em;
+    }
+
     /* about section */
     .about-block {
         flex-direction: column;
@@ -251,6 +265,9 @@ footer {
     .about-block:last-child {
         margin-top: 3rem;
         flex-direction: column-reverse;
+    }
+    .about-block .about-right p {
+        padding: 0 0.5em;
     }
 
     /* carousel */
@@ -277,5 +294,31 @@ footer {
     .social-icons ul {
         flex-wrap: wrap;
         justify-content: center;
+    }
+    
+    footer .container-fluid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .valid-block {
+        margin-bottom: 1em;
+    }
+
+    /* video section */
+    #video-block {
+        padding: 5em 0;
+    }
+    #video-block h1 {
+        margin-bottom: 0.5em;
+        font-size: 2em;
+    }
+    #video-block p {
+        max-width: 95%;
+        font-size: 1.2em;
+    }
+
+    /* price section */
+    .price-cat-right h3 {
+        font-size: 1.8em;
     }
 }
