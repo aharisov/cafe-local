@@ -170,6 +170,32 @@ header {
     flex: 1;
 }
 
+/* footer */
+footer {
+    padding: 1em 0;
+    background-color: #8D6339;
+}
+.social-icons ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.social-icons ul li {
+    margin-left: 1em;
+}
+.social-icons ul a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+.social-icons ul a:hover {
+    color: #402913;
+}
+.social-icons ul svg {
+    position: relative;
+    top: -2px;
+}
+
 /* mobile styles */
 @media (max-width: 1199px) {
     /* price section */
@@ -242,5 +268,14 @@ header {
     }
     #contacts button {
         width: 100%;
+    }
+
+    /* footer */
+    .social-icons {
+        width: 100%;
+    }
+    .social-icons ul {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
