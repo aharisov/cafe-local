@@ -71,3 +71,45 @@ header {
     height: 100%;
     object-fit: cover;
 }
+
+/* about section */
+.about-block figure {
+    width: 50%;
+    margin-bottom: 0;
+    height: 30em;
+}
+.about-block figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-block .about-right {
+    width: 50%;
+    padding: 0 3em;
+}
+.about-block:last-child figure {
+    margin-right: 0;
+}
+
+/* mobile styles */
+@media (max-width: 639px) {
+    /* about section */
+    .about-block {
+        flex-direction: column;
+    }
+    .about-block figure {
+        width: 100%;
+        height: 20em;
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+    .about-block .about-right {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .about-block:last-child {
+        margin-top: 3rem;
+        flex-direction: column-reverse;
+    }
+}
