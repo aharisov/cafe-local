@@ -116,4 +116,9 @@ header {
         margin-top: 3rem;
         flex-direction: column-reverse;
     }
+
+    /* carousel */
+    #photos .carousel-inner {
+        width: 100%;
+    }
 }
