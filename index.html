@@ -10,9 +10,10 @@
 
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="overflow-x-hidden">
     <!-- header start -->
-    <header class="position-fixed w-100 pt-2 pb-2">
+    <!-- header appears from top to bottom -->
+    <header class="position-fixed w-100 pt-2 pb-2 animate__animated animate__bounceInDown">
         <nav class="navbar navbar-expand-lg">
             <!-- responsive container -->
             <div class="container-fluid">
@@ -289,7 +290,8 @@
     </main>
 
     <!-- footer start -->
-    <footer>
+    <!-- footer appears from bottom to top with 5s delay -->
+    <footer class="animate__animated animate__bounceInUp animate__delay-5s">
         <!-- responsive container-->
         <div class="container-fluid d-flex justify-content-between">
 
