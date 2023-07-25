@@ -51,7 +51,7 @@
     <!-- main page content start -->
     <main>
         <!-- video section start -->
-        <!-- section apperas from left to right because of the class animate__fadeInLeft -->
+        <!-- section appears from left to right because of the class animate__fadeInLeft -->
         <section id="video-block" class="container-fluid position-relative animate__animated animate__fadeInLeft">
             <!-- backround video -->
             <video src="https://media.istockphoto.com/id/1269721081/fr/vid%C3%A9o/fermez-vous-vers-le-haut-des-graines-de-caf%C3%A9-les-grains-de-caf%C3%A9-parfum%C3%A9s-sont-de-la-fum%C3%A9e.mp4?s=mp4-640x640-is&k=20&c=7xISKR5TBX7sCnXPkY4xACXKUZ0NNMFKoXCS_KqNCnM=" class="position-absolute" muted loop autoplay></video>
@@ -64,7 +64,7 @@
         </section>
 
         <!-- carousel block start -->
-        <!-- section apperas from left to right because of the class animate__fadeInLeft -->
+        <!-- section appears from left to right because of the class animate__fadeInLeft -->
         <!-- there is a delay in 2s for appearing -->
         <div id="photos" class="carousel slide mt-5 mb-5 animate__animated animate__fadeInLeft animate__delay-2s">
             <!-- photos start -->
@@ -98,18 +98,18 @@
         </div>
 
         <!-- about section -->
-        <!-- section apperas from left to right because of the class animate__fadeInLeft -->
-        <!-- there is a delay in 3s for appearing -->
-        <section id="about" class="mb-5 animate__animated animate__fadeInLeft animate__delay-3s">
+        <section id="about" class="mb-5">
             <!-- 1st block -->
             <div class="about-block d-flex justify-content-between align-items-center">
                 <!-- picture -->
-                <figure>
+                <!-- picture appears with fadIn effect 3s after page loading -->
+                <figure class="animate__animated animate__fadeIn animate__delay-3s">
                     <img src="https://lauvergnenvrac.fr/wp-content/uploads/2020/11/cafe-en-grain-hondura-bio-et-e-quitable-1620x1080-1.jpg" alt="L'image pour l'histoire de café">
                 </figure>
 
                 <!-- title and text -->
-                <div class="about-right">
+                <!-- block appears with from right to left 3s after page loading -->
+                <div class="about-right animate__animated animate__bounceInRight animate__delay-3s">
                     <h2>À propos de nous</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed natus reprehenderit, dolorum eum iure. Dolores accusantium harum et dolorem odit sapiente eveniet temporibus repudiandae nisi sequi, atque deserunt amet?</p>
                 </div>
@@ -118,24 +118,26 @@
             <!-- 2nd block -->
             <div class="about-block d-flex justify-content-between align-items-center">
                 <!-- title and text -->
-                <div class="about-right">
+                <!-- block appears with from left to right 4s after page loading -->
+                <div class="about-right animate__animated animate__bounceInLeft animate__delay-4s">
                     <h2>Nos desserts</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed natus reprehenderit, dolorum eum iure. Dolores accusantium harum et dolorem odit sapiente eveniet temporibus repudiandae nisi sequi, atque deserunt amet?</p>
                 </div>
 
                 <!-- picture -->
-                <figure>
+                <!-- picture appears with fadIn effect 4s after page loading -->
+                <figure class="animate__animated animate__fadeIn animate__delay-4s">
                     <img src="https://cdn.wallpapersafari.com/69/13/quZGNM.jpg" alt="Nos desserts">
                 </figure>
             </div>
         </section>
 
         <!-- price section -->
-        <!-- section apperas from left to right because of the class animate__fadeInLeft -->
+        <!-- section appears from left to right because of the class animate__fadeInLeft -->
         <!-- there is a delay in 4s for appearing -->
         <section id="price-block" class="container animate__animated animate__fadeInLeft animate__delay-4s">
             <!-- section title -->
-            <!-- title apperas from top to down because of the class animate__bounceInDown -->
+            <!-- title appears from top to down because of the class animate__bounceInDown -->
             <!-- there is a delay in 4s for appearing -->
             <h2 class="mb-3 text-center animate__animated animate__bounceInDown animate__delay-4s">Notre menu</h2>
 
@@ -251,12 +253,12 @@
         </section>
 
         <!-- form section -->
-        <!-- section apperas from left to right because of the class animate__fadeInLeft -->
+        <!-- section appears from left to right because of the class animate__fadeInLeft -->
         <!-- there is a delay in 5s for appearing -->
         <section id="contacts" class="container mb-5 animate__animated animate__fadeInLeft animate__delay-5s">
             <!-- form title -->
-            <!-- title apperas from top to down because of the class animate__bounceInDown -->
-            <!-- there is a delay in 4s for appearing -->
+            <!-- title appears from top to down because of the class animate__bounceInDown -->
+            <!-- there is a delay in 5s for appearing -->
             <h2 class="text-center mb-3 animate__animated animate__bounceInDown animate__delay-5s">Contactez nous</h2>
 
             <form action="test.php" method="post">
