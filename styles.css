@@ -7,6 +7,31 @@ main {
 h1, h2 {
     font-size: 3em;
 }
+
+.change-mode {
+    position: fixed;
+    right: 30px;
+    bottom: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #402913;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.change-mode.light {
+    background-color: #fff;
+    border: 1px solid #402913;
+    color: #402913;
+}
+.change-mode.light:hover, .change-mode:hover {
+    background-color: #8D6339;
+}
+
 /* header */
 header {
     background-color: #8D6339;
@@ -204,6 +229,35 @@ footer {
 }
 footer p {
     margin-bottom: 0;
+}
+
+/* dark mode */
+body.dark-mode {
+    background-color: #100b06;
+    color: #fff;
+}
+.dark-mode header,
+.dark-mode footer,
+.dark-mode #contacts button {
+    background-color: #301b04;
+}
+.dark-mode .navbar-brand img {
+    filter: brightness(8);
+}
+.dark-mode #video-block h1, 
+.dark-mode #video-block p,
+.dark-mode .price-cat-right h3,
+.dark-mode .price-cat-right ul,
+.dark-mode #contacts label {
+    color: #fff;
+}
+.dark-mode .price-cat-right,
+.dark-mode .price-cat-right h3,
+.dark-mode .price-cat-right li span:nth-child(2) {
+    border-color: #fff;
+}
+.dark-mode .social-icons ul a:hover {
+    color: #000;
 }
 
 /* mobile styles */
