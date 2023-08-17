@@ -19,3 +19,18 @@ const changeTheme = () => {
         btn.innerHTML = iconDark;
     }
 }
+
+// open-close popup with settings
+const openClosePopup = () => {
+    const openPopupBtn = document.getElementById('show-popup');
+    const closePopupBtn = document.getElementById('close-popup');
+    const popup = document.getElementById('popup');
+
+    openPopupBtn.addEventListener('click', () => {
+        popup.classList.remove('hidden');
+    })
+
+    closePopupBtn.addEventListener('click', () => {
+        popup.classList.add('hidden');
+    })
+}

@@ -260,6 +260,117 @@ body.dark-mode {
     color: #000;
 }
 
+/* popup form */
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(16, 11, 6, 0.6);
+}
+#popup.hidden {
+    display: none;
+}
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.close-popup::before {
+    position: relative;
+    left: 0;
+    top: 8px;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    content: "";
+    transform: rotate(45deg);
+}
+.close-popup::after {
+    position: relative;
+    right: 0;
+    top: 6px;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    content: "";
+    transform: rotate(-45deg);
+}
+.popup-inner {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    min-height: 350px;
+    padding: 2em;
+    background-color: #f9d9ba;
+}
+.popup-inner legend {
+    font-style: italic;
+}
+.popup-inner textarea {
+    width: 100%;
+    resize: none;
+}
+.popup-inner .popup-row {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.popup-inner .popup-row .popup-row-item {
+    width: 48%;
+    margin-bottom: 10px;
+}
+.popup-inner .popup-row label,
+.popup-inner .popup-text label {
+    font-weight: 600;
+}
+.popup-inner .popup-row input,
+.popup-inner .popup-row select {
+    width: 70%;
+    height: 40px;
+}
+.popup-inner button {
+    display: block;
+    width: 50%;
+    height: 40px;
+    margin: 0 auto;
+    border: none;
+    background-color: #301b04;
+    color: #fff;
+    transition: 0.2s linear;
+}
+.popup-inner button:hover {
+    background-color: #8D6339;
+}
+
+/* open popup btn */
+#show-popup {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #402913;
+    border: 1px solid #402913;
+    color: #fff;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+#show-popup:hover {
+    background-color: #8D6339;
+}
+
 /* mobile styles */
 @media (max-width: 1199px) {
     /* price section */
