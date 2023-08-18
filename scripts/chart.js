@@ -56,13 +56,20 @@ let chart = new Chart(myChart, {
 
 // buy product and change it's quantity
 const buyProduct = () => {
+    // price sum of bought products, tva, full price
+    let sum = 0;
+    let tva = 0;
+    let sumNet = 0;
+
     // go through product list
     products.forEach(product => {
         // find buy btn
         const buyBtn = product.children.item(2);
         // get initial product quantity
         let counter = product.getAttribute('data-quan');
-
+        // get product price
+        const productPrice = parseFloat(product.getAttribute('data-price'));
+        
         // change product quantity by click on buy btn
         buyBtn.addEventListener('click', () => {
             product.setAttribute('data-quan', ++counter);
@@ -70,9 +77,24 @@ const buyProduct = () => {
             // update data and chart
             chart.data = getProductData();
             chart.update();
-        })
+            
+            // get elements for placing sums
+            const sumElement = document.querySelector('#full-price .sum span');
+            const tvaElement = document.querySelector('#full-price .tva span');
+            const sumBrutElement = document.querySelector('#full-price .brut span');
 
-        //console.log(buyBtn);
+            // calculate prices and tva 20%
+            sum += productPrice;
+            tva = (sum * 0.2).toFixed(2);
+            sumNet = sum - tva;
+
+            // place sums in html 
+            sumElement.textContent = sum;
+            tvaElement.textContent = tva;
+            sumBrutElement.textContent = sumNet;
+
+            //console.log(sum);
+        })
     })
 }
 

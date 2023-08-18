@@ -13,47 +13,47 @@
 
         <!-- products list which users can buy -->
         <div class="products-list">
-            <div class="product-item" data-quan="0">
+            <div class="product-item" data-quan="0" data-price="1">
                 <div class="name">Americano</div>
-                <div class="price">2€</div>
+                <div class="price">1€</div>
                 <button>Acheter</button>
             </div>
-            <div class="product-item" data-quan="0">
+            <div class="product-item" data-quan="0" data-price="2">
                 <div class="name">Cappucino caramel</div>
                 <div class="price">2€</div>
                 <button>Acheter</button>
             </div>
-            <div class="product-item" data-quan="0">
+            <div class="product-item" data-quan="0" data-price="3.5">
                 <div class="name">Iced Latte</div>
                 <div class="price">3.5€</div>
                 <button>Acheter</button>
             </div>
-            <div class="product-item" data-quan="0">
+            <div class="product-item" data-quan="0" data-price="2">
                 <div class="name">Croissant special</div>
                 <div class="price">2€</div>
                 <button>Acheter</button>
             </div>
-            <div class="product-item" data-quan="0">
+            <div class="product-item" data-quan="0" data-price="2.5">
                 <div class="name">Pain au chocolat</div>
                 <div class="price">2.5€</div>
                 <button>Acheter</button>
             </div>
-            <div class="product-item" data-quan="0">
+            <div class="product-item" data-quan="0" data-price="3">
                 <div class="name">Pain au raisin</div>
                 <div class="price">3€</div>
                 <button>Acheter</button>
             </div>
-            <div class="product-item" data-quan="0">
+            <div class="product-item" data-quan="0" data-price="1">
                 <div class="name">Macaron</div>
                 <div class="price">1€</div>
                 <button>Acheter</button>
             </div>
-            <div class="product-item" data-quan="0">
+            <div class="product-item" data-quan="0" data-price="3">
                 <div class="name">Éclair au chocolat</div>
                 <div class="price">3€</div>
                 <button>Acheter</button>
             </div>
-            <div class="product-item" data-quan="0">
+            <div class="product-item" data-quan="0" data-price="4">
                 <div class="name">Mille-feuille</div>
                 <div class="price">4€</div>
                 <button>Acheter</button>
@@ -61,6 +61,13 @@
         </div>
         <!-- canvas for drawing chart -->
         <canvas id="chart"></canvas>
+
+        <!-- sum block -->
+        <div id="full-price">
+            <div class="sum">Chiffres d'affaires - <span>0</span>€</div>
+            <div class="tva">TVA - <span>0</span>€</div>
+            <div class="brut">Somme - <span>0</span>€</div>
+        </div>
     </div> 
 
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

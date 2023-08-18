@@ -412,6 +412,12 @@ body.dark-mode {
     background: #8D6339;
 }
 
+#full-price {
+    margin-top: 2em;
+    font-size: 2em;
+    text-align: center;
+}
+
 /* mobile styles */
 @media (max-width: 1199px) {
     /* price section */
