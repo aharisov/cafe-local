@@ -19,3 +19,109 @@ const changeTheme = () => {
         btn.innerHTML = iconDark;
     }
 }
+
+// open-close popup with settings
+const openPopup = () => {
+    // create vaiables
+    const openPopupBtn = document.getElementById('show-popup');
+    const popup = document.getElementById('popup');
+
+    // open popup
+    openPopupBtn.addEventListener('click', () => {
+        popup.classList.remove('hidden');
+    })
+}
+
+const closePopup = () => {
+    // create vaiables
+    const closePopupBtn = document.getElementById('close-popup');
+    const popup = document.getElementById('popup');
+
+    // close popup
+    closePopupBtn.addEventListener('click', () => {
+        popup.classList.add('hidden');
+    })
+}
+
+openPopup();
+closePopup();
+
+// function for creating sections
+const createSection = () => {
+    /**
+     * Algo
+     * create section, container for title and text,  title, text, image
+     * get content values from inputs and selects
+     * add content inside title, text, image
+     * add background color to section
+     * add text color to section
+     * add title inside container
+     * add text inside container
+     * add container inside section
+     * add image inside section
+     * position image inside section
+     * add section inside body and position it
+     * close popup
+     */
+    
+    // find body, main and popup elements
+    const body = document.querySelector('body');
+    const main = document.querySelector('main');
+    const popup = document.getElementById('popup');
+
+    // create section, title, text, image
+    const sectionContainer = document.createElement('section');
+    const sectionTitle = document.createElement('h3');
+    const sectionText = document.createElement('p');
+    const sectionImage = document.createElement('img');
+    const textContainer = document.createElement('div');
+
+    // get content values from inputs and selects
+    const sectionTitleValue = document.getElementById('section-title').value;
+    const sectionTextValue = document.getElementById('section-text').value;
+    const imageSource = document.getElementById('section-image').value;
+    const imagePosition = document.getElementById('section-image-place').value;
+    const sectionPositionValue = document.getElementById('section-place').value;
+    const sectionBgColor = document.getElementById('section-bg-color').value;
+    const sectionTextColor = document.getElementById('section-text-color').value;
+
+    // create content
+    const sectionTitleContent = document.createTextNode(sectionTitleValue);
+    const sectionTextContent = document.createTextNode(sectionTextValue);
+    sectionImage.setAttribute("src", imageSource);
+
+    // add content to section title and text
+    sectionTitle.appendChild(sectionTitleContent);
+    sectionText.appendChild(sectionTextContent);
+    
+    // stylish section
+    sectionContainer.style.backgroundColor = sectionBgColor;
+    sectionContainer.style.color = sectionTextColor;
+    sectionContainer.style.display = 'flex';
+
+    // add title and text to container
+    textContainer.appendChild(sectionTitle);
+    textContainer.appendChild(sectionText);
+
+    // add container and image to section
+    sectionContainer.appendChild(sectionImage);
+    sectionContainer.appendChild(textContainer);
+
+    // position image and text inside section
+    if (imagePosition == 'left') {
+        sectionContainer.style.justifyContent = 'flex-start'
+    } else {
+        sectionContainer.style.flexDirection = 'row-reverse';
+        sectionContainer.style.justifyContent = 'space-between';
+    }
+
+    // add section to the page and position it
+    const sectionPosition = document.getElementById(sectionPositionValue);
+    //console.log(sectionPosition);
+    
+    // if position is not before footer it is necessary to insert section inside main element 
+    sectionPositionValue != 'footer' ? main.insertBefore(sectionContainer, sectionPosition) : body.insertBefore(sectionContainer, sectionPosition);
+
+    // close popup
+    popup.classList.add('hidden');
+}

@@ -294,7 +294,7 @@
 
     <!-- footer start -->
     <!-- footer appears from bottom to top with 5s delay -->
-    <footer class="animate__animated animate__bounceInUp animate__delay-5s">
+    <footer id="footer" class="animate__animated animate__bounceInUp animate__delay-5s">
         <!-- responsive container-->
         <div class="container-fluid d-flex justify-content-between">
             <!-- validation logo -->
@@ -349,6 +349,85 @@
             <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
         </svg>
     </div>
+
+    <div id="show-popup">Ajouter une séction</div>
+
+    <!-- popup for user settings -->
+    <section id="popup" class="hidden">
+        <div class="popup-inner">
+            <div id="close-popup" class="close-popup"></div>
+
+            <h3>Ajoutez votre séction</h3>
+
+            <form action="javascript:void(0)">
+                <fieldset>
+                    <legend>Choisissez l'info de séction</legend>
+
+                    <div class="popup-row d-flex justify-content-between">
+                        <!-- input for section title -->
+                        <div class="popup-row-item">
+                            <label for="section-title">Le titre de séction ?</label><br>
+                            <input type="text" name="section-title" id="section-title">
+                        </div>
+
+                        <!-- input for section image -->
+                        <div class="popup-row-item">
+                            <label for="section-image">L'image de séction url ?</label><br>
+                            <input type="text" name="section-image" id="section-image">
+                        </div>
+
+                        <!-- select for place of image in section -->
+                        <div class="popup-row-item">
+                            <label for="section-image-place">Où placer l'image ?</label><br>
+                            <select name="section-image-place" id="section-image-place">
+                                <option value="left">À gauche</option>
+                                <option value="right">À droite</option>
+                            </select>
+                        </div>
+
+                        <!-- select for place of section in page -->
+                        <div class="popup-row-item">
+                            <label for="section-place">Où vous allez placer une section ?</label><br>
+                            <select name="section-place" id="section-place">
+                                <option value="footer">Avant footer</option>
+                                <option value="video-block">Avant le bloc de "video"</option>
+                                <option value="photos">Avant la section "carousel"</option>
+                                <option value="about">Avant la section "à propos de nous"</option>
+                                <option value="price-block">Avant la section "menu"</option>
+                                <option value="contacts">Avant le formulaire</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- text for section description -->
+                    <div class="popup-text">
+                        <label for="section-text">Ajoutez de texte</label><br>
+                        <textarea name="section-text" id="section-text" rows="10"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Choisissez des styles de séction</legend>
+
+                    <div class="popup-row d-flex">
+                        <!-- choose section background color -->
+                        <div class="popup-row-item">
+                            <label for="section-bg-color">La couleur de background de séction ?</label><br>
+                            <input type="color" name="section-bg-color" id="section-bg-color" value="#8D6339">
+                        </div>
+
+                        <!-- choose section text color -->
+                        <div class="popup-row-item">
+                            <label for="section-text-color">La couleur de texte de séction ?</label><br>
+                            <input type="color" name="section-text-color" id="section-text-color" value="#ffffff">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="button" onclick="createSection()">Créer une séction</button>
+            </form>
+        </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
