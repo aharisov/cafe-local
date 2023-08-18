@@ -294,7 +294,7 @@
 
     <!-- footer start -->
     <!-- footer appears from bottom to top with 5s delay -->
-    <footer class="animate__animated animate__bounceInUp animate__delay-5s">
+    <footer id="footer" class="animate__animated animate__bounceInUp animate__delay-5s">
         <!-- responsive container-->
         <div class="container-fluid d-flex justify-content-between">
             <!-- validation logo -->
@@ -350,12 +350,12 @@
         </svg>
     </div>
 
-    <div id="show-popup" onclick="openClosePopup()">Ajouter une séction</div>
+    <div id="show-popup">Ajouter une séction</div>
 
     <!-- popup for user settings -->
     <section id="popup" class="hidden">
         <div class="popup-inner">
-            <div id="close-popup" class="close-popup" onclick="openClosePopup()"></div>
+            <div id="close-popup" class="close-popup"></div>
 
             <h3>Ajoutez votre séction</h3>
 
@@ -372,8 +372,8 @@
 
                         <!-- input for section image -->
                         <div class="popup-row-item">
-                            <label for="section-image">L'image de séction ?</label><br>
-                            <input type="file" name="section-image" id="section-image">
+                            <label for="section-image">L'image de séction url ?</label><br>
+                            <input type="text" name="section-image" id="section-image">
                         </div>
 
                         <!-- select for place of image in section -->
@@ -389,11 +389,12 @@
                         <div class="popup-row-item">
                             <label for="section-place">Où vous allez placer une section ?</label><br>
                             <select name="section-place" id="section-place">
-                                <option value="#contacts">Avant footer</option>
-                                <option value="#video-block">Après le bloc de "video"</option>
-                                <option value="#photos">Après la section "carousel"</option>
-                                <option value="#about">Après la section "à propos de nous"</option>
-                                <option value="#price-block">Après la section "menu"</option>
+                                <option value="footer">Avant footer</option>
+                                <option value="video-block">Avant le bloc de "video"</option>
+                                <option value="photos">Avant la section "carousel"</option>
+                                <option value="about">Avant la section "à propos de nous"</option>
+                                <option value="price-block">Avant la section "menu"</option>
+                                <option value="contacts">Avant le formulaire</option>
                             </select>
                         </div>
                     </div>
@@ -423,7 +424,7 @@
                     </div>
                 </fieldset>
 
-                <button type="button">Créer une séction</button>
+                <button type="button" onclick="createSection()">Créer une séction</button>
             </form>
         </div>
     </section>
