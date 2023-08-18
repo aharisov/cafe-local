@@ -378,6 +378,9 @@ body.dark-mode {
     padding-top: 2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.products-page h1 {
+    text-align: center;
+}
 .products-list {
     margin-bottom: 2em;
 }
