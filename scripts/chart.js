@@ -88,7 +88,8 @@ const buyProduct = () => {
             chart.data.datasets[0].data = quanArr;
             chart.update();
             
-            console.log(quanArr);
+            //console.log(quanArr);
+
             // get elements for placing sums
             const sumElement = document.querySelector('#full-price .sum span');
             const tvaElement = document.querySelector('#full-price .tva span');
@@ -97,7 +98,7 @@ const buyProduct = () => {
             // calculate prices and tva 20%
             sum += productPrice;
             tva = (sum * 0.2).toFixed(2);
-            sumNet = sum - tva;
+            sumNet = sum + tva;
 
             // place sums in html 
             sumElement.textContent = sum;
