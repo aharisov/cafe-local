@@ -61,8 +61,15 @@ const buyProduct = () => {
     let tva = 0;
     let sumNet = 0;
 
+    // store all product quantities
+    let quanArr = [];
+
+    for (let i = 0; i < products.length; i++) {
+        quanArr.push(parseInt(products[i].getAttribute('data-quan')));
+    }
+
     // go through product list
-    products.forEach(product => {
+    products.forEach((product, index) => {
         // find buy btn
         const buyBtn = product.children.item(2);
         // get initial product quantity
@@ -74,10 +81,14 @@ const buyProduct = () => {
         buyBtn.addEventListener('click', () => {
             product.setAttribute('data-quan', ++counter);
 
-            // update data and chart
-            chart.data = getProductData();
+            // update product quantity
+            quanArr[index] = counter;
+
+            // update data array and pass new quantity to the chart
+            chart.data.datasets[0].data = quanArr;
             chart.update();
             
+            console.log(quanArr);
             // get elements for placing sums
             const sumElement = document.querySelector('#full-price .sum span');
             const tvaElement = document.querySelector('#full-price .tva span');
