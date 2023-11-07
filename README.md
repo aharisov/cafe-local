@@ -41,3 +41,19 @@ This project was designed for consolidating knowledge in HTML, CSS, JavaScript a
 **Client:** HTML5, CSS3, JavaScript 
 
 **Libraries:** Bootstrap 5,  Animate.css, Chart.js
+
+## Screenshots
+### --------------------- Header ---------------------
+![Screenshot](screenshots/header.png)
+### --------------------- About ---------------------
+![Screenshot](screenshots/nous.png)
+### --------------------- Menu ---------------------
+![Screenshot](screenshots/menu.png)
+### --------------------- Form ---------------------
+![Screenshot](screenshots/form.png)
+### --------------------- Dark mode ---------------------
+![Screenshot](screenshots/dark_mode.png)
+### --------------------- Popup for adding section ---------------------
+![Screenshot](screenshots/add_section.png)
+### --------------------- Buy page ---------------------
+![Screenshot](screenshots/buy_page.png)
